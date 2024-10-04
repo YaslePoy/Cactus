@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f102837b2adb400a934982454a2b2266" Name="Diagram1">
+        <EntityTypeShape EntityType="CactusDBModel.Cactus" Width="1.5" PointX="3" PointY="2" />
+        <EntityTypeShape EntityType="CactusDBModel.CactusKind" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="CactusDBModel.Collection" Width="1.5" PointX="5.25" PointY="2.125" />
+        <EntityTypeShape EntityType="CactusDBModel.Comment" Width="1.5" PointX="7.5" PointY="3.625" />
+        <EntityTypeShape EntityType="CactusDBModel.Exhibition" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="CactusDBModel.Prize" Width="1.5" PointX="7.5" PointY="1" />
+        <EntityTypeShape EntityType="CactusDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" />
+        <AssociationConnector Association="CactusDBModel.FK_Cactus_CactusKind" />
+        <AssociationConnector Association="CactusDBModel.FK_Collection_Cactus" />
+        <AssociationConnector Association="CactusDBModel.FK_Collection_Exhibition" />
+        <AssociationConnector Association="CactusDBModel.FK_Comment_Collection" />
+        <AssociationConnector Association="CactusDBModel.FK_Prize_Collection" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

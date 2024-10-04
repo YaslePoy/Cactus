@@ -1,0 +1,52 @@
+﻿<Page x:Class="Cactus.Pages.CollectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Cactus.Pages"
+      mc:Ignorable="d"
+      Title="CollectionPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <ListView Name="CommentsLV">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Author}"></TextBlock>
+                        <TextBlock Text="{Binding Text}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <DockPanel Grid.Row="1">
+            <TextBlock DockPanel.Dock="Top">Ваше имя</TextBlock>
+            <TextBox DockPanel.Dock="Top" Name="NameTB"></TextBox>
+            <TextBlock DockPanel.Dock="Top">Комментарий</TextBlock>
+            <TextBox DockPanel.Dock="Top" Name="CommentTB"></TextBox>
+        </DockPanel>
+        <Button Grid.Row="2" Click="ButtonBase_OnClick">Опубликовать</Button>
+        <ListView Grid.Column="1" Name="PrizeLV">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <DockPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock DockPanel.Dock="Top">Название приза</TextBlock>
+            <TextBox DockPanel.Dock="Top" Name="PrizeTB"></TextBox>
+        </DockPanel>
+        <Button Grid.Row="2" Grid.Column="1" Click="Prize_OnClick">Опубликовать</Button>
+    </Grid>
+</Page>
